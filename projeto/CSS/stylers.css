@@ -1,0 +1,16 @@
+body{
+    margin: 0 0 0 0;
+}
+
+.main-menu-div{
+    background-color: #9ED8DB;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.main-menu-div-button{
+    text-decoration: none;
+    color: #1D3354;
+    font-size: 30pt;
+    margin-left: 50px;
+}
