@@ -6,4 +6,4 @@ Projeto consiste em uma construção de um site de portifólio para estruturaç�
 - Ter ao menos 3 áreas do conteúdo
 - Uma página para inserção de conteúdos
   - Selecionar para qual área inserir
-  - Preencher dadosd e acordo com a área
+  - Preencher dados de acordo com a área
