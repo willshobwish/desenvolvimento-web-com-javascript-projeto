@@ -1,0 +1,72 @@
+/* Body */
+body {
+    margin: 0 0 0 0;
+    padding-bottom: 5%;
+}
+
+.main-menu-div {
+    background-color: #9ed8db;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+/* Botao de menu do canto superior esquerdo */
+/* font-family: 'Quintessential', cursive; */
+.main-menu-div-button {
+    text-decoration: none;
+    color: #1d3354;
+    font-size: 30pt;
+    font-family: "Quintessential", cursive;
+}
+
+.main-menu-div-button:hover {
+    color: rgb(255, 0, 0);
+}
+
+.main-menu-div-button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.main-menu-div-button-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 100px;
+}
+
+.menu-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    font-size: 15pt;
+}
+
+.menu-button:hover {
+    color: red;
+}
+
+/* Titulo da homepage
+    font-family: 'Rowdies', cursive; */
+.title {
+    font-size: 30pt;
+    text-align: center;
+    color: #192a48;
+    font-family: "Rowdies", cursive;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.description {
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+}
+
+/* Fontes para o corpo */
+.roboto {
+    font-family: "Roboto", sans-serif;
+}
