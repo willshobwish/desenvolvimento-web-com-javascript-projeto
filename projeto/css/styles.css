@@ -14,6 +14,9 @@ body {
 /* Botao de menu do canto superior esquerdo */
 /* font-family: 'Quintessential', cursive; */
 .main-menu-div-button {
+    display: grid;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
     color: #1d3354;
     font-size: 30pt;
@@ -25,9 +28,9 @@ body {
 }
 
 .main-menu-div-button-container {
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 100px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-left: 50px;
 }
 
 .main-menu-div-button-right {
@@ -39,10 +42,12 @@ body {
 }
 
 .menu-button {
+    text-align: center;
     padding-left: 10px;
     padding-right: 10px;
     text-decoration: none;
     font-size: 15pt;
+    font-family: "Supermercado One", cursive;
 }
 
 .menu-button:hover {
@@ -61,12 +66,49 @@ body {
 }
 
 .description {
-    margin-left: 20%;
-    margin-right: 20%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
 }
 
 /* Fontes para o corpo */
 .roboto {
     font-family: "Roboto", sans-serif;
+}
+
+/* Contato */
+.profile-div {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-description {
+    text-align: center;
+}
+
+.profile-1 {
+    background-image: url(../images/perfil-1.jpg);
+    border-radius: 100%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-2 {
+    background-image: url(../images/perfil-2.jpg);
+    border-radius: 100%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+}
+
+/* Posts description */
+.post-description-div {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 50px;
 }
