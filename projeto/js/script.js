@@ -27,6 +27,15 @@ $("#page") //Seleciona a id do div
     .append(
         '<a href="./page3-contato.html" id="contato" class="menu-button">Contato</a>'
     );
+//
+(function ($) {
+    $.fn.fadeinfunction = function () {
+        this.hide()
+            .delay((duracao += adicaoDuracao))
+            .fadeIn(duracaoFadeIn);
+        return this;
+    };
+})(jQuery);
 
 //Variaveis para especificar a duracao do ms do "fadeIn()"
 var duracao = 250;
@@ -35,15 +44,37 @@ var duracaoFadeIn = 500;
 
 // Fade in no conteudo do site quando entra ou vai para o outro link
 $(".title").hide().fadeIn(duracaoFadeIn);
-$(".description").hide().delay(250).fadeIn(duracaoFadeIn);
+$(".description").hide().delay(duracao).fadeIn(duracaoFadeIn);
 
 // Fade in nos botoes do menu, da esquerda para a direita
-$("#contato").hide().delay(duracao).fadeIn(duracaoFadeIn);
-$("#projetos")
-    .hide()
-    .delay((duracao += adicaoDuracao))
-    .fadeIn(duracaoFadeIn);
-$("#posts")
+$("#contato").fadeinfunction();
+$("#projetos").fadeinfunction();
+$("#posts").fadeinfunction();
+
+//Posts
+$.getJSON("../js/lista-de-postagens.json", function (data, textStatus, jqXHR) {
+    console.log("Geração dinâmica das postagens funcional");
+    console.log(
+        "Quantidade de objetos dentro JSON: " + Object.keys(data).length
+    );
+    var tamanhoDaLista = Object.keys(data).length / 2 - 1;
+    let numberOfPost = Object.keys(data).length / 2 - 1;
+    while (numberOfPost >= 0) {
+        let $posts = $("<div/>")
+            .attr("id", "post-" + numberOfPost)
+            .addClass("post-description-div")
+            .html(
+                data[numberOfPost + "data"] +
+                    "<br>" +
+                    data[numberOfPost + "conteudo"]
+            );
+        $("#posts-description").append($posts);
+        numberOfPost -= 1;
+    }
+});
+
+//Contato
+$("#profile-div")
     .hide()
     .delay((duracao += adicaoDuracao))
     .fadeIn(duracaoFadeIn);
