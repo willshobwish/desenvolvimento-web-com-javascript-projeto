@@ -1,6 +1,6 @@
 # Desenvolvimento Web - Projeto Semestral
 
-###### Realizado por Willian Murayama e Mariana Santos
+###### Realizado por Mariana Santos, Victor Eiji e Willian Murayama
 
 Projeto consiste em uma construção de um site de portifólio para estruturação de projetos, cursos e entre outros.
 
