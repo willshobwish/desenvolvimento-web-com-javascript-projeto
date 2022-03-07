@@ -37,44 +37,40 @@ $("#page") //Seleciona a id do div
     };
 })(jQuery);
 
-//Variaveis para especificar a duracao do ms do "fadeIn()"
-var duracao = 250;
-var adicaoDuracao = 250;
-var duracaoFadeIn = 500;
-
-// Fade in no conteudo do site quando entra ou vai para o outro link
-$(".title").hide().fadeIn(duracaoFadeIn);
-$(".description").hide().delay(duracao).fadeIn(duracaoFadeIn);
+//letiaveis para especificar a duracao do ms do "fadeIn()"
+let duracao = 250;
+let adicaoDuracao = 250;
+let duracaoFadeIn = 500;
 
 // Fade in nos botoes do menu, da esquerda para a direita
-$("#contato").fadeinfunction();
-$("#projetos").fadeinfunction();
-$("#posts").fadeinfunction();
+$(".content-title").fadeinfunction();
+$(".content-description").fadeinfunction();
+$(".content-description-posts").fadeinfunction();
 
 //Posts
-$.getJSON("../js/lista-de-postagens.json", function (data, textStatus, jqXHR) {
-    console.log("Geração dinâmica das postagens funcional");
-    console.log(
-        "Quantidade de objetos dentro JSON: " + Object.keys(data).length
-    );
-    var tamanhoDaLista = Object.keys(data).length / 2 - 1;
-    let numberOfPost = Object.keys(data).length / 2 - 1;
-    while (numberOfPost >= 0) {
-        let $posts = $("<div/>")
-            .attr("id", "post-" + numberOfPost)
-            .addClass("post-description-div")
-            .html(
-                data[numberOfPost + "data"] +
-                    "<br>" +
-                    data[numberOfPost + "conteudo"]
-            );
-        $("#posts-description").append($posts);
-        numberOfPost -= 1;
+$.getJSON(
+    "projeto/js/lista-de-postagens.json",
+    function (data, textStatus, jqXHR) {
+        console.log("Geração dinâmica das postagens funcional");
+        console.log(
+            "Quantidade de objetos dentro JSON: " +
+                Object.keys(data.dados["0"].data).length
+        );
+        console.log(data.dados["0"].data);
+        let tamanhoDaLista = Object.keys(data).length / 2 - 1;
+        let numberOfPost = Object.keys(data.dados).length / 2 - 1;
+        console.log(numberOfPost);
+        while (numberOfPost >= 0) {
+            let $posts = $("<div/>")
+                .attr("id", "post-" + numberOfPost)
+                .addClass("post-description-div")
+                .html(
+                    data.dados[numberOfPost].data +
+                        "<br>" +
+                        data.dados[numberOfPost].conteudo
+                );
+            $(".content-description-posts").append($posts);
+            numberOfPost -= 1;
+        }
     }
-});
-
-//Contato
-$("#profile-div")
-    .hide()
-    .delay((duracao += adicaoDuracao))
-    .fadeIn(duracaoFadeIn);
+);

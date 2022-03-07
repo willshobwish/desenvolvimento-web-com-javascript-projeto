@@ -1,114 +1,72 @@
-/* Body */
+/* Para todo o documento */
 body {
     margin: 0 0 0 0;
-    padding-bottom: 5%;
 }
 
-.main-menu-div {
-    background-color: #9ed8db;
+/* Fontes adicionadas, CSS para utilizar
+    font-family: 'Quintessential', cursive;
+
+    font-family: 'Redressed', cursive;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-family: 'Rowdies', cursive;
+
+    font-family: 'Shizuru', cursive;
+
+    font-family: 'Supermercado One', cursive; */
+
+/* Menu */
+.menu-bar-backgrond {
+    background-color: cyan;
     padding-top: 20px;
     padding-bottom: 20px;
-    display: flex;
 }
 
-/* Botao de menu do canto superior esquerdo */
-/* font-family: 'Quintessential', cursive; */
-.main-menu-div-button {
-    display: grid;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: #1d3354;
-    font-size: 30pt;
-    font-family: "Quintessential", cursive;
-}
-
-.main-menu-div-button:hover {
-    color: rgb(255, 0, 0);
-}
-
-.main-menu-div-button-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    margin-left: 50px;
-}
-
-.main-menu-div-button-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.menu-bar {
+    /* margens em auto para centralizar a div */
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    column-gap: 10px;
+    max-width: 75%;
 }
 
-.menu-button {
+.menu-bar-homepage {
+}
+
+.menu-bar-grid {
     text-align: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-family: "Rowdies", cursive;
+}
+
+.menu-bar-title-anchor {
     text-decoration: none;
-    font-size: 15pt;
+    font-family: "Redressed", cursive;
+    font-size: 30pt;
+}
+
+.menu-bar-anchor {
+    text-decoration: none;
+}
+
+/* Conteudo */
+.content {
+    text-align: center;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.content-title {
+    font-size: 20pt;
+    margin-bottom: 20px;
     font-family: "Supermercado One", cursive;
 }
 
-.menu-button:hover {
-    color: red;
-}
-
-/* Titulo da homepage
-    font-family: 'Rowdies', cursive; */
-.title {
-    font-size: 30pt;
-    text-align: center;
-    color: #192a48;
-    font-family: "Rowdies", cursive;
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
-.description {
-    max-width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-}
-
-/* Fontes para o corpo */
-.roboto {
+.content-description {
     font-family: "Roboto", sans-serif;
-}
-
-/* Contato */
-.profile-div {
-    display: flex;
-    justify-content: center;
-}
-
-.profile-description {
-    text-align: center;
-}
-
-.profile-1 {
-    background-image: url(../images/perfil-1.jpg);
-    border-radius: 100%;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-}
-
-.profile-2 {
-    background-image: url(../images/perfil-2.jpg);
-    border-radius: 100%;
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 200px;
-    height: 200px;
-}
-
-/* Posts description */
-.post-description-div {
-    font-family: "Roboto", sans-serif;
-    margin-bottom: 50px;
 }
