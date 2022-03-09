@@ -1,3 +1,47 @@
+// window.onload = function () {
+//     var requestURL = 'projeto/js/db.json';
+//     var request = new XMLHttpRequest();
+//     request.open('GET', requestURL);
+//     request.responseType = 'json';
+//     request.send();
+
+//     request.onload = function() {
+//         var items = request.response.items;
+//         var listAbout = [];
+//         var listGoals = [];
+//         var listProjects = [];
+//         let list = document.querySelector('#content');
+//         items.forEach((element) => {
+//             if(element.category == 1){
+//                 listAbout.push(element);
+//             } 
+//             if(element.category == 2){
+//                 listGoals.push(element);
+//             }
+//             if(element.category == 3){
+//                 listProjects.push(element);
+//             }
+//         })
+//         listAbout.forEach((element) => {
+//             if(element.categoryLabel === 'title'){}
+//             var li = document.createElement('li');
+//             li.classList.add('content-description');
+
+//             var itemAbout = document.createElement('h1');
+//             itemAbout.classList.add('content-description');
+//             itemAbout.innerHTML = element.description;
+
+//             li.appendChild(itemAbout);
+//         })
+       
+//         list.appendChild(li);
+//        // item.classList.add('cat-' + element.category);
+       
+            
+//     }
+
+// }
+
 // A page can't be manipulated safely until the document is "ready." jQuery detects this state of readiness for you. https://learn.jquery.com/using-jquery-core/document-ready/
 $(document).ready(function () {
     console.log("ready!");
@@ -46,11 +90,12 @@ let duracaoFadeIn = 500;
 $(".content-title").fadeinfunction();
 $(".content-description").fadeinfunction();
 $(".content-description-posts").fadeinfunction();
-
+/*
 //Posts
-$.getJSON(
-    "projeto/js/lista-de-postagens.json",
+var getFunction = $.getJSON(
+    "projeto/js/db.json",
     function (data, textStatus, jqXHR) {
+        console.log(data)
         console.log("Geração dinâmica das postagens funcional");
         console.log(
             "Quantidade de objetos dentro JSON: " +
@@ -73,4 +118,4 @@ $.getJSON(
             numberOfPost -= 1;
         }
     }
-);
+);*/
