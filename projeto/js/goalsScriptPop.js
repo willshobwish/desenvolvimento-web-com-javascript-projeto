@@ -31,9 +31,6 @@ window.onload = function () {
 
             const li = document.createElement("div");
             li.classList.add("content-description");
-            // li.classList.add('content-description');
-            // li.classList.remove('list-style-type: none');
-
             if (element.categoryLabel === "title") {
                 itemGoalTitle.classList.add("content-description");
                 itemGoalTitle.innerHTML = element.description;
@@ -43,10 +40,7 @@ window.onload = function () {
                 itemGoal.innerHTML = element.description;
                 li.appendChild(itemGoal);
             }
-
             list.appendChild(li);
         });
-
-        // item.classList.add('cat-' + element.category);
     };
 };
